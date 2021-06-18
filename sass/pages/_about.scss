@@ -112,6 +112,7 @@
 
     @include respond (tablet-uchun) {
         padding: 10rem 0;
+        background-position: top -80% left;
     }
 
     @include respond (telefonlar-uchun) {
