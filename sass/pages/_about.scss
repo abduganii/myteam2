@@ -1,0 +1,145 @@
+.main-1 {
+    padding-top: 14rem;
+    padding-bottom: 16.8rem;
+    background-color: $color-47;
+    color: $color-ff;
+    background-image: url('../img/Group\ 8\ \(1\).svg'), url('../img/Group\ 8\ Copy.svg');
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    background-size: 10rem 20rem, 14.7rem 10rem;
+
+    @include respond(telefonlar-uchun) {
+        background-position: top -10rem left, bottom right;
+    }
+
+    .container {
+        @include respond (tablet-uchun) {
+            padding-left: 9.7rem;
+            padding-right: 9.8rem;
+        }
+
+        @include respond(telefonlar-uchun) {
+            padding: 0;
+        }
+    }
+
+    @include respond (tablet-uchun) {
+        padding-top: 10rem;
+        padding-bottom: 12.8rem;
+    }
+
+    @include respond(telefonlar-uchun) {
+        padding-top: 8.8rem;
+        padding-bottom: 11.6rem
+    }
+
+    &-h2 {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 6.4rem;
+        text-align: center;
+
+        @include respond (tablet-uchun) {
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 32px;
+            text-align: center;
+        }
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media only screen and (max-width:755px) {
+            justify-content: center;
+        }
+
+        &__item {
+            background-color: $color-34;
+            text-align: center;
+            padding: 3.2rem 2.5rem 5.6rem 2.5rem;
+            margin-bottom: 7.6rem;
+            width: 35rem;
+
+
+            @include respond (tablet-uchun) {
+                max-width: 28.1rem;
+
+            }
+
+
+            @media only screen and (max-width:755px) {
+                max-width: 32.7rem;
+            }
+
+
+
+        }
+    }
+
+    &-p {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+
+        color: #79C8C7;
+        margin-top: 1.6rem;
+    }
+
+    &-p2 {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 25px;
+
+        text-align: center;
+
+        color: $color-ff;
+    }
+}
+
+.main-2 {
+    padding: 14rem 16.5rem;
+    color: $color-ff;
+    background-color: $color-34;
+    background-image: url('../img/clients-bg.svg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 20rem 20rem;
+
+    @include respond (tablet-uchun) {
+        padding: 10rem 0;
+    }
+
+    .container {
+        @include respond (tablet-uchun) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+    }
+
+    &-h2 {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 7rem;
+        text-align: center;
+
+        @include respond (tablet-uchun) {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 32px;
+            text-align: center;
+        }
+    }
+}
+
+.imgs {
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}

@@ -1,0 +1,248 @@
+.hero {
+    background-image: url('../img/Group\ 8.svg');
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 10rem 20rem;
+
+    @include respond(telefonlar-uchun) {
+        background-position: bottom -10rem right;
+    }
+}
+
+.header {
+
+    color: $color-ff;
+    padding-top: 7.3rem;
+    padding-bottom: 12.4rem;
+
+    @include respond (tablet-uchun) {
+        padding-top: 6.4rem;
+        padding-bottom: 8rem;
+    }
+
+
+
+    .container {
+        display: flex;
+        align-items: center;
+
+        @include respond(telefonlar-uchun) {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+
+    .list {
+        display: flex;
+        margin-left: 8rem;
+
+        @include respond(telefonlar-uchun) {
+            display: none;
+        }
+
+        &__link {
+            display: inline-block;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            color: inherit;
+
+            &:not(:nth-child(2)) {
+                margin-right: 4rem;
+            }
+        }
+    }
+
+    &-bottom {
+        padding-bottom: 12rem;
+
+        @include respond (tablet-uchun) {
+            padding-bottom: 11.2rem;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            color: $color-ff;
+
+            @include respond (tablet-uchun) {
+                flex-direction: column;
+                align-items: center;
+                padding-left: 15.5rem;
+                padding-right: 15.5rem;
+            }
+
+            @include respond(telefonlar-uchun) {
+                padding-left: 24px;
+                padding-right: 24px;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        &-h1 {
+            font-weight: bold;
+            font-size: 64px;
+            line-height: 100px;
+            margin: 0;
+
+            @include respond(telefonlar-uchun) {
+                font-weight: bold;
+                font-size: 40px;
+                line-height: 40px;
+                text-align: center;
+            }
+        }
+
+        &-p {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            width: 73rem;
+            position: relative;
+            padding-top: 4rem;
+
+            @include respond(telefonlar-uchun) {
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 28px;
+                margin-top: 1.6rem;
+                text-align: center;
+            }
+
+            &::after {
+                @include baElements(5rem, 4px);
+                background-color: $color-7e;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                @include respond (tablet-uchun) {
+                    display: none;
+                }
+
+            }
+
+            @include respond (tablet-uchun) {
+                width: 100%;
+                padding: 0;
+                margin-top: 2.4rem;
+            }
+        }
+    }
+}
+
+label {
+    align-self: center;
+    margin-left: auto;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+input {
+    display: none;
+
+}
+
+input:checked+label span {
+    visibility: hidden;
+}
+
+input:checked+label span::before {
+    visibility: visible;
+    top: 0;
+    transform: rotate(135deg);
+}
+
+input:checked+label span::after {
+    visibility: visible;
+    top: 0;
+    transform: rotate(-135deg);
+}
+
+input:checked~.modal {
+    transform: translateX(0);
+}
+
+.hamburger {
+    display: none;
+    width: 2rem;
+    height: 2px;
+    background-color: $color-ff;
+    margin-left: auto;
+    position: absolute;
+    top: 7.4rem;
+    right: 4rem;
+    z-index: 15;
+
+    @include respond(telefonlar-uchun) {
+        display: inline-block;
+    }
+
+    &::before {
+        @include baElements(2rem, 2px);
+        background-color: $color-ff;
+        position: absolute;
+        top: -4px;
+    }
+
+    &::after {
+        @include baElements(2rem, 2px);
+        background-color: $color-ff;
+        position: absolute;
+        top: 4px;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 70vw;
+    height: 100vh;
+    background-color: $color-69;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding-left: 4.8rem;
+    transform: translateX(100%);
+    background-image: url('../../img/Group\ 8\ \(3\).png');
+    background-size: 10rem 20rem;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    transition: all 1s;
+
+    @include respond(telefonlar-uchun) {
+        display: inline-block;
+    }
+
+    .list2 {
+        display: block;
+        color: $color-ff;
+        margin-top: 11.2rem;
+
+        &__link {
+            &:hover {
+                color: $color-7e;
+            }
+
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        &__item {
+            &:nth-child(1) {
+                margin-bottom: 2.4em;
+            }
+
+            &:nth-child(2) {
+                margin-bottom: 3.6rem;
+            }
+        }
+    }
+}

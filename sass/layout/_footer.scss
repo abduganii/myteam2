@@ -1,0 +1,130 @@
+.footer {
+    background-color: $color-29;
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
+    color: $color-ff;
+
+    .container {
+        display: flex;
+
+        @include respond(tablet-uchun) {
+            flex-direction: column;
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        @include respond(telefonlar-uchun) {
+            flex-direction: column;
+            padding-left: 2.4rem;
+            padding-right: 2.4rem;
+            text-align: center;
+        }
+    }
+
+    &--left {
+        margin-right: 12.5rem;
+
+        @include respond(telefonlar-uchun) {
+            margin-right: 0;
+        }
+
+        &--ps {
+            display: flex;
+
+            @include respond(telefonlar-uchun) {
+                justify-content: center;
+            }
+
+            &-p {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 28px;
+                margin-top: 4rem;
+
+                &:hover {
+                    color: $color-7e;
+                }
+
+                &:not(:nth-child(1)) {
+                    margin-left: 4rem;
+                    margin-top: 4rem;
+                }
+            }
+        }
+
+        &-p {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 25px;
+            opacity: 0.6;
+            margin-bottom: 4rem;
+
+            @include respond(telefonlar-uchun) {
+                margin-top: 2.4rem;
+
+            }
+
+        }
+    }
+
+    &--right {
+        margin-left: auto;
+        text-align: right;
+
+        @include respond(tablet-uchun) {
+            display: flex;
+            align-items: center;
+            margin-left: 0;
+        }
+
+        @include respond(telefonlar-uchun) {
+            display: inline-block;
+            margin-left: 0;
+            text-align: center;
+            justify-content: space-between;
+        }
+
+        &-p {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 25px;
+            text-align: right;
+            color: #FFFFFF;
+            opacity: 0.6;
+            margin-top: 5.2rem;
+
+            @include respond(tablet-uchun) {
+                margin-top: 0;
+                margin-left: auto;
+
+            }
+
+            @include respond(telefonlar-uchun) {
+                text-align: center;
+                margin-top: 1.6rem;
+            }
+        }
+    }
+
+}
+
+svg {
+    color: white;
+
+    &:not(:nth-child(3)) {
+        margin-right: 13px;
+    }
+
+    &:hover {
+        color: #F67E7E;
+    }
+}
+
+.footer3 {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(telefonlar-uchun) {
+        flex-direction: column;
+    }
+}

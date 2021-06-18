@@ -1,0 +1,21 @@
+.btn {
+    display: inline-block;
+    padding: 1rem 3.3rem;
+    border: 2px solid #FFFFFF;
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: inherit;
+    margin-left: auto;
+
+    &__none {
+        @include respond(telefonlar-uchun) {
+            display: none;
+        }
+    }
+}
+
+.btn__itemFFF {
+    border: 2px solid black;
+}
