@@ -63,7 +63,7 @@
             padding: 3.2rem 2.5rem 5.6rem 2.5rem;
             margin-bottom: 7.6rem;
             width: 35rem;
-
+            position: relative;
 
             @include respond (tablet-uchun) {
                 max-width: 28.1rem;
@@ -114,10 +114,20 @@
         padding: 10rem 0;
     }
 
+    @include respond (telefonlar-uchun) {
+        background-position: top -10rem left -10rem;
+        padding: 8.8rem 0;
+    }
+
     .container {
         @include respond (tablet-uchun) {
             padding-left: 4rem;
             padding-right: 4rem;
+        }
+
+        @include respond (telefonlar-uchun) {
+            padding-left: 2.4rem;
+            padding-right: 2.4rem;
         }
     }
 
@@ -135,11 +145,98 @@
             line-height: 32px;
             text-align: center;
         }
+
+        @include respond (telefonlar-uchun) {
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 32px;
+            /* identical to box height, or 100% */
+
+            text-align: center;
+        }
+    }
+}
+
+.plus {
+    position: absolute;
+    bottom: -2.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.img1 {
+    width: 16.8rem;
+    height: 2.8rem;
+
+    @include respond(tablet-uchun2) {
+        width: 10.3rem;
+        height: 1.7rem;
+    }
+
+    @include respond(telefonlar-uchun) {
+        margin-bottom: 6rem;
+    }
+}
+
+.img2 {
+    width: 18.4rem;
+    height: 2.3rem;
+
+    @include respond(tablet-uchun2) {
+        width: 10.3rem;
+        height: 1.7rem;
+    }
+
+    @include respond(telefonlar-uchun) {
+        margin-bottom: 6rem;
+    }
+
+}
+
+.img3 {
+    width: 18rem;
+    height: 2.8rem;
+
+    @include respond(tablet-uchun2) {
+        width: 10.3rem;
+        height: 1.7rem;
+    }
+
+    @include respond(telefonlar-uchun) {
+        margin-bottom: 6rem;
+    }
+}
+
+.img4 {
+    width: 16.5rem;
+    height: 2.8rem;
+
+    @include respond(tablet-uchun2) {
+        width: 10.3rem;
+        height: 1.7rem;
+    }
+
+    @include respond(telefonlar-uchun) {
+        margin-bottom: 6rem;
+    }
+}
+
+.img5 {
+    width: 9.8rem;
+    height: 4.5rem;
+
+    @include respond(tablet-uchun2) {
+        width: 10.3rem;
+        height: 1.7rem;
     }
 }
 
 .imgs {
-    display: flex;
+    @include FlexCentur;
     justify-content: space-between;
-    display: none;
+
+    @include respond(telefonlar-uchun) {
+        flex-direction: column;
+        align-items: center;
+    }
 }

@@ -9,7 +9,17 @@
     color: inherit;
     margin-left: auto;
 
+    @include respond(telefonlar-uchun) {
+        margin: 0;
+    }
+
     &__none {
+
+        &:hover {
+            background-color: #FFFFFF;
+            color: black;
+        }
+
         @include respond(telefonlar-uchun) {
             display: none;
         }

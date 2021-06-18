@@ -13,7 +13,7 @@
             padding-right: 4rem;
         }
 
-        @include respond(telefonlar-uchun) {
+        @include respond (telefonlar-uchun) {
             flex-direction: column;
             padding-left: 2.4rem;
             padding-right: 2.4rem;
@@ -24,7 +24,7 @@
     &--left {
         margin-right: 12.5rem;
 
-        @include respond(telefonlar-uchun) {
+        @include respond (telefonlar-uchun) {
             margin-right: 0;
         }
 
@@ -59,7 +59,7 @@
             opacity: 0.6;
             margin-bottom: 4rem;
 
-            @include respond(telefonlar-uchun) {
+            @include respond (telefonlar-uchun) {
                 margin-top: 2.4rem;
 
             }
@@ -77,7 +77,7 @@
             margin-left: 0;
         }
 
-        @include respond(telefonlar-uchun) {
+        @include respond (telefonlar-uchun) {
             display: inline-block;
             margin-left: 0;
             text-align: center;
@@ -99,7 +99,7 @@
 
             }
 
-            @include respond(telefonlar-uchun) {
+            @include respond (telefonlar-uchun) {
                 text-align: center;
                 margin-top: 1.6rem;
             }
